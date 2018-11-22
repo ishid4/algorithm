@@ -11,11 +11,11 @@ main(){
 	}                                               
 	for(int i=0;i<5;i++){                                     
 		for(int j=0;j<3;j++){
-			if(j==0){
-				sayi[i][j]=5+rand()%10;
+			if(j == 0){
+				sayi[i][j]=5 + rand()%10;
 				printf("%4d", sayi[i][j]);
 			}
-			else if (j==1){
+			else if (j == 1){
 				printf("%4d", sayi[i][j] = input[i]++);
 			}
 			else{
