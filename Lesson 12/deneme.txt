@@ -1,0 +1,2 @@
+iki sayinin toplami !!!
+12 + 52 = 64
