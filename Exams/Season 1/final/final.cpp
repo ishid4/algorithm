@@ -22,7 +22,7 @@ struct matrisler{
 }matris_adi[5];
 
 main(){
-	int rndm, ortalama, toplam=0, toplam1, toplam2, toplam3, toplam4, toplam5, toplam6, toplam7, toplam8;
+	int rndm, ortalama, toplam=0, sayi;
 	srand(time(NULL));
 	
 	FILE *sonuc;
@@ -44,15 +44,14 @@ main(){
 		printf("\n\n");
 	}
 	fclose(sonuc);
+	sonuc = fopen("sinav.txt","r");
 	
-	FILE *sonuc2;
-	sonuc2 = fopen("sinav.txt","r");
-	
-	while(!feof(sonuc2)){
-		fscanf(sonuc2, "%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t\n", &toplam1, &toplam2, &toplam3, &toplam4, &toplam5, &toplam6, &toplam7, &toplam8);
-		toplam += toplam1 + toplam2 + toplam3 + toplam4 + toplam5 + toplam6 + toplam7 + toplam8;
+	while(!feof(sonuc)){
+		fscanf(sonuc, "%d\t", &sayi);
+		toplam += sayi;
 	}
 	toplam/=72;
 	printf("%d", toplam);
 	
+	fclose(sonuc);
 }
