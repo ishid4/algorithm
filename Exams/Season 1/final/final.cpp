@@ -3,8 +3,9 @@
 #include <string.h>
 #include <time.h>
 
+int rndm;
 int rastgele(){
-	int rndm = rand()%900 + 99;
+	rndm = rand()%900 + 99;
 	
 	if(rndm % 2 == 0)
 		return rndm;
@@ -22,7 +23,7 @@ struct matrisler{
 }matris_adi[5];
 
 main(){
-	int rndm, ortalama, toplam=0, sayi;
+	int ortalama, toplam=0, sayi;
 	srand(time(NULL));
 	
 	FILE *sonuc;
